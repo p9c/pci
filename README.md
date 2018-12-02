@@ -1,2 +1,3 @@
-# pci
-ParallelCoin WebSite
+# ParallelCoin.Info WebSite
+ParallelCoin.Info WebSite
+
