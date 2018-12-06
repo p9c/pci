@@ -1,0 +1,33 @@
+package jdb
+
+import (
+	"fmt"
+
+	scribble "github.com/nanobox-io/golang-scribble"
+)
+
+var VueLibs map[string][]byte
+
+func init() {
+	dir := "./jdb/"
+	db, err := scribble.New(dir, nil)
+	if err != nil {
+		fmt.Println("Error", err)
+	}
+	db.Write("lang", "vlibs", VLB)
+
+	if err := db.Read("data", "vimgs", &VueImgs); err != nil {
+		fmt.Println("Error", err)
+	}
+	// if err := db.Read("data", "vicons", &VueIcons); err != nil {
+	// 	fmt.Println("Error", err)
+	// }
+
+	// if err := db.Read("vicons", "vicons", &VIcons); err != nil {
+	// 	fmt.Println("Error", err)
+	// }
+	// if err := db.Read("data", "settings", &Settings); err != nil {
+	// 	fmt.Println("Error", err)
+	// }
+
+}

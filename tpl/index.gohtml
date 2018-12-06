@@ -1,0 +1,41 @@
+{{ define "index"}}
+ <h1>Index</h1>
+ <hr>
+ <hr>
+ {{.}}
+ <hr>
+ 
+      <small>User: %s</small>
+  <form method="post" action="/logout">
+      <button type="submit">Logout</button>
+  </form>
+
+ <hr>
+ <hr>
+
+   <h1>Admin</h1>
+<hr>
+<small>User: %s</small>
+{{ range .}}
+{{.}}
+<form method="post" action="/index">
+<label for="lang">English<input type="radio" name="lang" value="en"></label>
+  <label for="lang">Srpski<input type="radio" name="lang" value="rs"></label>
+  <label for="lang">German<input type="radio" name="lang" value="de"></label>
+ <hr>
+       <label for="title">Title</label>
+      <input type="text" id="title" name="title" value="{{.Title}}">
+ <hr>
+      <label for="intro">Intro</label>
+      <input type="text" id="intro" name="intro" value="{{.Intro}}">
+ <hr>
+      <label for="welcome">Welcome</label>
+      <input type="text" id="welcome" name="welcome" value="{{.Welcome}}">
+ <hr>
+      <label for="about">About</label>
+      <input type="text" id="about" name="about" value="{{.About}}">
+ <hr>
+    <button type="submit">Submit</button>
+</form>
+{{end}}
+{{end}}
