@@ -1,0 +1,55 @@
+{{ define "admin"}}
+{{template "header" .}}
+ <h1>ParallelCoin.Info Admin</h1>
+  <hr>
+   <form method="post" action="/logout">
+      <button type="submit" class="button is-danger">Logout</button>
+  </form>
+<hr>
+<div class="tabs">
+{{ range .}}
+  <input type="radio" name="tabs" id="{{.Code}}">
+  <label for="{{.Code}}">{{.Language}}</label>
+  <div class="tab">
+
+<form method="post" action="/admin">
+     <input type="hidden" id="code" name="code" value="{{.Code}}">
+     <input type="hidden" id="lang" name="lang" value="{{.Language}}">
+ <hr>
+     <div class="field">
+     <label class="label">Title</label>
+     <div class="control">
+     <input class="input" type="text" id="title" name="title" value="{{.Title}}">
+     </div>
+     </div>
+ <hr>
+     <div class="field">
+     <label class="label">Intro</label>
+     <div class="control">
+     <textarea class="textarea" id="intro" name="intro" rows="10">{{.Intro}}</textarea>
+     </div>
+     </div>
+
+ <hr>
+     <div class="field">
+     <label class="label">Welcome</label>
+     <div class="control">
+      <input class="input" type="text" id="welcome" name="welcome" value="{{.Welcome}}">
+     </div>
+     </div>
+
+ <hr>
+     <div class="field">
+     <label class="label">About</label>
+     <div class="control">
+          <textarea class="textarea" id="about" name="about" rows="10">{{.About}}</textarea>
+          </div>
+     </div>
+ <hr>
+    <button type="submit" class="button is-primary">Submit</button>
+</form>
+</div>
+{{end}}
+</div>
+{{template "footer" .}}
+{{end}}
