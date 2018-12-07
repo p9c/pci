@@ -1,0 +1,37 @@
+{{define "footer"}}
+<footer class="vs-footer">
+    <div class="vs-footer-middle">
+        <div class="vs-section-title text-center">
+            <h3><span class="text-title"> site.section-7 }}</span></h3>
+        </div>
+        <ul class="menu align-center vs-box-social">
+            {{/* {% for item in site.data-section-7 %} */}}
+            <li>
+                <a href=" item.amp-img-href }}">
+                    <div class="vs-social-media">
+                        <amp-img src=" item.amp-img-scr }}" width=" item.amp-img-width }}" height=" item.amp-img-height }}" layout=" item.amp-img-layout }}" alt=" item.amp-img-alt }}"></amp-img>
+                    </div>
+                </a>
+            </li>
+            {{/* {% endfor %} */}}
+        </ul>
+    </div>
+    <div class="vs-footer-bottom">
+        <div class="grid-x grid-padding-x align-middle">
+            <div class="small-12 cell">
+                <div class="vs-copyright">
+                     site.section-8 }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <amp-install-serviceworker
+      src=" site.siteurl }}/sw.js"
+      data-iframe-src=" site.siteurl }}/sw.html"
+      layout="nodisplay">
+    </amp-install-serviceworker>
+    <noscript>
+        Aktifkan Javascript di browser Anda ...
+    </noscript>
+</footer>
+{{end}}

@@ -1,0 +1,60 @@
+{{define "home"}}
+<!DOCTYPE html>
+<html ⚡ lang="{{.Site.Lang }}">
+
+<head prefix="og: http://ogp.me/ns#">
+    <meta name="msvalidate.01" content="" />
+    <title>page.title }}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="shortcut icon" href="{{ .Site.Favicon }}">
+    <link rel="canonical" href="{{ .Site.Url }}{{ page.url | replace:'index.html',''}}">
+    <meta name="theme-color" content="#3399ff"/>
+    <meta name="amp-experiments-opt-in" content="visibility-v2,visibility-v3">
+    <meta name="keywords" lang="{{ .Site.Lang }}" content="{{ range .Site.Keywords }}{{.}},{{end}}">
+    <link rel="alternate" href="{{ .Site.Siteurl }}" hreflang="{{ .Site.Lang }}" />
+    <meta name="description" content="{{ .Site.Description }}"/>
+    <meta property="fb:app_id" content="{{ .Site.Fb_app_id }}" />
+    <meta property="og:locale" content="{{ .Site.Locale }}" />
+    <meta property="og:url" content="{{ .Site.Siteurl }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
+    <meta property="og:title" content="{{ Home.Title }} | {{ .Site.Title }} | {{ .Site.Company }}" />
+    <meta property="og:description" content="{{ .Site.Description }}" />
+    {{/* <meta property="og:image" content="{{ page.photos }}" /> */}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@{{.Site.Twitter }}">
+    <meta name="twitter:creator" content="@{{ .Site.Creator }}">
+    <meta name="twitter:title" content="{{ Home.Title }} | {{ .Site.Title }} | {{ .Site.Company }}">
+    <meta name="twitter:description" content="{{ .Site.Description }}">
+    {{/* <meta name="twitter:image" content="{{ page.photos }}"> */}}
+    {{/*<script type='application/ld+json'>
+    {"@context":"http:\/\/schema.org","@type":"{{ .Site.Type }}","@id":"#{{ .Site.Type }}","url":"https:\/\/{{ .Site.Company }}\/","name":"{{ page.title }} - {{ .Site.Title }} - {{ .Site.Company }}","potentialAction":{"@type":"SearchAction","target":"https:\/\/{{ .Site.Company }}\/?s={search_term_string}","query-input":"required name=search_term_string"},"image":"{{ page.photos }}","address":{
+    "streetAddress":"{{ .Site.StreetAddress }}","name": "{{ .Site.Address }}","postalCode": "{{ .Site.postalCode }}"},"telephone":"{{ .Site.telephone }}","priceRange":"100.000"}</script>*/}}
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ .Site.Favicon }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ .Site.Favicon }}">
+    <link rel="apple-touch-icon" sizes="167x167" href="{{ .Site.Favicon }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.Favicon }}">
+
+    {{ template "amp-project" .}}
+    {{ template "amp-boilerplate" .}}
+    {{ template "amp-instagram" .}}
+    {{ template "amp-sidebar" .}}
+    {{ template "amp-form" .}}
+    <style amp-custom>
+        {{ template "csshome" .}}
+    </style>
+</head>
+
+<body>
+    {{ template "nav" .}}
+    {{ template "content" .}}
+    {{ template "footer" .}} 
+    {{/* {% include ./tpl/amp/inc/float-button.html %} */}}
+</body>
+
+</html>
+{{end}}

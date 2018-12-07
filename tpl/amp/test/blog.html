@@ -1,0 +1,50 @@
+---
+layout: blog
+title: Info
+canonical: https://tran99.com/blog/index.html
+photos: https://tran99.com/static/rental-mobil-surabaya.jpg
+---
+<section class="vs-content">
+    <div class="vs-page vs-page-product">
+        <div class="vs-section vs-section-product-list">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    <div class="small-12 cell">
+                        <div class="vs-section-title text-center">
+                            <h3><span class="text-title">{{ site.section-post }}</span></h3>
+                        </div>
+                    </div>
+                    <div class="small-12 cell">
+                        <div class="grid-x grid-padding-x">
+                            {% for post in site.posts %}
+                            <div class="small-12 large-6 cell">
+                                <div class="vs-box-product-list">
+                                    <div class="grid-x grid-padding-x">
+                                        <div class="small-12 medium-4 cell on-desktop">
+                                            <amp-img class="blog" src="{{ post.amp-img-scr }}" width="165" height="180" layout="fixed" alt="{{ post.amp-img-alt }}"></amp-img>
+                                        </div>
+                                        <div class="small-12 medium-4 cell on-phone">
+                                            <amp-img class="blog" src="{{ post.amp-img-scr }}" width="{{ post.amp-img-width }}" height="{{ post.amp-img-height }}" layout="responsive" alt="{{ post.amp-img-alt }}"></amp-img>
+                                        </div>
+                                        <div class="small-12 medium-8 cell">
+                                            <div class="desc padding-top-1 padding-bottom-1">
+                                                <ul>
+                                                    <p class="blog">{{ post.excerpt }}</p>
+                                                </ul>
+                                            </div>
+                                            <a href="{{ post.url }}">
+                                                <div class="blog-title text-right vs-bg-secondary">
+                                                    <h5 class="text-black font-bold">{{ post.text-title }}</h5>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>

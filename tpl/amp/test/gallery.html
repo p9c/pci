@@ -1,0 +1,35 @@
+---
+layout: gallery
+title: Gallery
+canonical: https://tran99.com/gallery/index.html
+photos: https://tran99.com/static/rental-mobil-surabaya.jpg
+---
+<section class="vs-content">
+    <div class="vs-page vs-page-gallery">
+        <div class="vs-section vs-bg-smoke vs-section-gallery">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x align-center">
+                    <div class="small-12 cell">
+                        <div class="vs-section-title text-center">
+                            <h3><span class="text-title">{{ site.section-4 }}</span></h3>
+                        </div>
+                    </div>
+                    <div class="small-12 medium-11 large-10 cell">
+                        <div class="vs-gallery-content">
+                            <div class="grid-x grid-padding-x">
+                                {% for item in site.data-gallery %}
+                                <div class="large-4 cell">
+                                    <div class="vs-box-gall-img">
+                                        <amp-instagram data-shortcode="{{ item.data-shortcode }}" width="1" height="1" layout="responsive">
+                                        </amp-instagram>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

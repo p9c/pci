@@ -1,0 +1,80 @@
+{{ define "content"}}
+     {{ template "nav" .}}
+<section class="section">
+<div class="card">
+  <div class="card-content">
+    <form method="post" action="/admin">
+     <div class="field"><label class="label">Title</label>
+     <div class="control"><input class="input" type="text" id="title" name="title" value="{{.Title}}"></div>
+     </div>
+     <div class="field"><label class="label">Subtitle</label>
+     <div class="control"><input class="input" type="text" id="subtitle" name="subtitle" value="{{.SubTitle}}"></div>
+     </div>
+     <div class="field"><label class="label">Welcome</label>
+     <div class="control">
+      <input class="input" type="text" id="welcome" name="welcome" value="{{.Welcome}}">
+     </div></div>
+     <div class="field"><label class="label">About</label>
+     <div class="control"><textarea class="textarea" id="about" name="about" rows="10">{{.About}}</textarea></div>
+     </div>
+     <div class="field"><label class="label">Features</label>
+     <div class="control"><input class="input" type="text" id="features" name="features" value="{{.Features}}"></div>
+     </div>
+     <div class="field"><label class="label">Feature 1</label>
+     <div class="control"><input class="input" type="text" id="feature1" name="feature1" value="{{.Feature1}}"></div>
+     </div>
+     <div class="field"><label class="label">Feature 1 Text</label>
+     <div class="control">
+     <textarea class="textarea" id="feature1txt" name="feature1txt" rows="10">{{.Feature1txt}}</textarea>
+     </div></div>
+     <div class="field"><label class="label">Feature 2</label>
+     <div class="control"><input class="input" type="text" id="feature2" name="feature2" value="{{.Feature2}}"></div>
+     </div>
+     <div class="field"><label class="label">Feature 2 Text</label>
+     <div class="control">
+     <textarea class="textarea" id="feature2txt" name="feature2txt" rows="10">{{.Feature2txt}}</textarea>
+     </div></div>
+     <div class="field"><label class="label">Feature 3</label>
+     <div class="control"><input class="input" type="text" id="feature1" name="feature3" value="{{.Feature3}}"></div>
+     </div>
+     <div class="field"><label class="label">Feature 3 Text</label>
+     <div class="control">
+     <textarea class="textarea" id="feature1txt" name="feature1txt" rows="10">{{.Feature3txt}}</textarea>
+     </div></div>
+     <div class="field"><label class="label">Feature 4</label>
+     <div class="control"><input class="input" type="text" id="feature4" name="feature4" value="{{.Feature4}}"></div>
+     </div>
+     <div class="field"><label class="label">Feature 4 Text</label>
+     <div class="control"><textarea class="textarea" id="feature4txt" name="feature4txt" rows="10">{{.Feature4txt}}</textarea>
+     </div></div>
+     <div class="field"><label class="label">Gallery</label>
+     <div class="control"><input class="input" type="text" id="gallery" name="gallery" value="{{.Gallery}}"></div>
+     </div>
+     <div class="field"><label class="label">Specs</label>
+     <div class="control"><input class="input" type="text" id="specs" name="specs" value="{{.Specs}}"></div>
+     </div>
+     <div class="field"><label class="label">Spec 1</label>
+     <div class="control"><input class="input" type="text" id="spec1" name="spec1" value="{{.Spec1}}"></div>
+     </div>
+     <div class="field"><label class="label">Spec 2</label>
+     <div class="control"><input class="input" type="text" id="spec2" name="spec2" value="{{.Spec2}}"></div>
+     </div>
+     <div class="field"><label class="label">Spec 3</label>
+     <div class="control"><input class="input" type="text" id="spec3" name="spec3" value="{{.Spec3}}"></div>
+     </div>
+     <div class="field"><label class="label">Spec 4</label>
+     <div class="control"><input class="input" type="text" id="spec4" name="spec4" value="{{.Spec4}}"></div>
+     </div>
+     <div class="field"><label class="label">Moto 1</label>
+     <div class="control"><input class="input" type="text" id="moto1" name="moto1" value="{{.Moto1}}"></div>
+     </div>
+     <div class="field"><label class="label">Moto 2</label>
+     <div class="control"><input class="input" type="text" id="moto2" name="moto2" value="{{.Moto2}}"></div>
+     </div>
+
+    <button type="submit" class="button is-primary">Save</button>
+</form>
+</div>
+</div>
+</section>
+{{end}}
