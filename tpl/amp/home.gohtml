@@ -50,29 +50,33 @@
         XXXXXXXXXXXXXXXXXXXXXXXX
         </div>
     </section>
-        <section class="flex flex-wrap bggray py4">
-        <h3 class="col-12 center"> {{ .Page.features }}</h3>
+
+    <section class="flex flex-wrap bggray py4 smi">
+        <h3 class="col-12 center"> {{ .Page.descriptions }}</h3>
         <div class="px2 col-6 flex flex-column justify-center center">
             {{ template "puzzle"}}
-            <h6>{{ .Page.feature1 }}</h6>
-            <p>{{ .Page.feature1txt }}</p>
+            <h6>{{ .Page.description1 }}</h6>
+            <p>{{ .Page.description1txt }}</p>
         </div>
         <div class="px2 col-6 flex flex-column justify-center center">
             {{ template "clock"}}
-            <h6 class="shape-text">{{ .Page.feature2 }}</h6>
-            <p>{{ .Page.feature2txt }}</p>
+            <h6 class="shape-text">{{ .Page.description2 }}</h6>
+            <p>{{ .Page.description2txt }}</p>
         </div>
         <div class="px2 col-6 flex flex-column justify-center center">
             {{ template "addressbook"}}
-            <h6 class="shape-text">{{ .Page.feature3 }}</h6>
-            <p> {{ .Page.feature3txt }}</p>
+            <h6 class="shape-text">{{ .Page.description3 }}</h6>
+            <p> {{ .Page.description3txt }}</p>
         </div>
         <div class="px2 col-6 flex flex-column justify-center center">
             {{ template "folder"}}
-            <h6 class="shape-text">{{ .Page.feature4 }}</h6>
-            <p>{{ .Page.feature4txt }}</p>
+            <h6 class="shape-text">{{ .Page.description4 }}</h6>
+            <p>{{ .Page.description4txt }}</p>
         </div>
     </section>
+
+
+
     <section class="flex flex-wrap py4">
         <h3 class="col-12 center"> {{ .Page.specs }}</h3>
         <div class="sm-col-6 flex flex-wrap">

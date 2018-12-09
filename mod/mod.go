@@ -45,11 +45,11 @@ type Home struct {
 	Moto2       string `json:"moto2"`
 }
 
-type About struct {
+type Story struct {
 	Title    string `json:"title"`
 	SubTitle string `json:"subtitle"`
 }
-type Download struct {
+type Software struct {
 	Title    string `json:"title"`
 	SubTitle string `json:"subtitle"`
 }
@@ -67,4 +67,12 @@ type Resources struct {
 	Type  string `json:"type"`
 	Title string `json:"title"`
 	URL   string `json:"url"`
+}
+
+type Post struct {
+	ID      uint64 `json:"id"`
+	Title   string `json:"title"`
+	Excerpt string `json:"excertpt"`
+	Content string `json:"content"`
+	Image   string `json:"img"`
 }
