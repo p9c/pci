@@ -25,7 +25,7 @@ func main() {
 
 	r.HandleFunc("/api/{lang}", rts.ApiHandler)
 
-	r.HandleFunc("/amp/{lang}", rts.AmpHandler)
+	r.HandleFunc("/amp/{lang}/{page}", rts.AmpHandler)
 
 	http.Handle("/", r)
 	http.ListenAndServe(":8090", nil)

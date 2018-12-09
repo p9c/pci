@@ -1,43 +1,47 @@
-<!DOCTYPE html>
-<html ⚡ lang="id">
+{{define "contact"}}
+{{/* <!DOCTYPE html> */}}
+{{/* <html ⚡ lang="{{.Site.Lang }}"> */}}
 
-<head prefix="og: http://ogp.me/ns#">
-    <title>{{ page.title }} {{ site.title }} {{ site.company }}</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <link rel="shortcut icon" href="{{ site.favicon }}">
-    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
-    <meta name="theme-color" content="#3399ff"/>
-    <meta name="amp-experiments-opt-in" content="visibility-v2,visibility-v3">
-    <meta name="keywords" lang="{{ site.lang }}" content="{{ site.keywords }}">
-    <!-- This site is optimized with the Yoast SEO plugin v3.6.1 - https://yoast.com/wordpress/plugins/seo/ -->
-    <meta name="description" content="{{ site.description }}"/>
-    <!-- You can use Open Graph tags to customize link previews.Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
-    <meta property="fb:app_id" content="{{ site.fb_app_id }}" />
-    <meta property="og:locale" content="{{ site.locale }}" />
-    <meta property="og:url" content="{{ site.siteurl }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="{{ site.title }}" />
-    <meta property="og:title" content="{{ page.title }} | {{ site.title }} | {{ site.company }}" />
-    <meta property="og:description" content="{{ site.description }}" />
-    <meta property="og:image" content="{{ page.photos }}" />
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@{{ site.twitter }}">
-    <meta name="twitter:creator" content="@{{ site.creator }}">
-    <meta name="twitter:title" content="{{ page.title }} | {{ site.title }} | {{ site.company }}">
-    <meta name="twitter:description" content="{{ site.description }}">
-    <meta name="twitter:image" content="{{ page.photos }}">
-    <script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"{{ site.type }}","@id":"#{{ site.type }}","url":"https:\/\/{{ site.company }}\/","name":"{{ page.title }} - {{ site.title }} - {{ site.company }}","potentialAction":{"@type":"SearchAction","target":"https:\/\/{{ site.company }}\/?s={search_term_string}","query-input":"required name=search_term_string"},"image":"{{ page.photos }}","address":{
-    "streetAddress":"{{ site.streetAddress }}","name": "{{ site.address }}","postalCode": "{{ site.postalCode }}"},"telephone":"{{ site.telephone }}","priceRange":"100.000"}</script>
-    <!-- / Yoast SEO plugin. -->
-    <link rel="manifest" href="/manifest.json">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ site.favicon }}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ site.favicon }}">
-    <link rel="apple-touch-icon" sizes="167x167" href="{{ site.favicon }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.favicon }}">
-    {% include amp-project.html %} {% include amp-boilerplate.html %} {% include amp-instagram.html %} {% include amp-sidebar.html %} {% include amp-form.html %} {% include amp-iframe.html %}
+{{/* <head prefix="og: http://ogp.me/ns#"> */}}
+    {{/* <title>{{ page.title }} {{ site.title }} {{ site.company }}</title> */}}
+    {{/* <meta charset="utf-8"> */}}
+    {{/* <meta http-equiv="X-UA-Compatible" content="IE=edge"> */}}
+    {{/* <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"> */}}
+    {{/* <link rel="shortcut icon" href="{{ site.favicon }}"> */}}
+    {{/* <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}"> */}}
+    {{/* <meta name="theme-color" content="#3399ff"/> */}}
+    {{/* <meta name="amp-experiments-opt-in" content="visibility-v2,visibility-v3"> */}}
+    {{/* <meta name="keywords" lang="{{ site.lang }}" content="{{ site.keywords }}"> */}}
+    {{/* <meta name="description" content="{{ site.description }}"/> */}}
+    {{/* <meta property="fb:app_id" content="{{ site.fb_app_id }}" /> */}}
+    {{/* <meta property="og:locale" content="{{ site.locale }}" /> */}}
+    {{/* <meta property="og:url" content="{{ site.siteurl }}" /> */}}
+    {{/* <meta property="og:type" content="website" /> */}}
+    {{/* <meta property="og:site_name" content="{{ site.title }}" /> */}}
+    {{/* <meta property="og:title" content="{{ page.title }} | {{ site.title }} | {{ site.company }}" /> */}}
+    {{/* <meta property="og:description" content="{{ site.description }}" /> */}}
+    {{/* <meta property="og:image" content="{{ page.photos }}" /> */}}
+    {{/* <meta name="twitter:card" content="summary_large_image"> */}}
+    {{/* <meta name="twitter:site" content="@{{ site.twitter }}"> */}}
+    {{/* <meta name="twitter:creator" content="@{{ site.creator }}"> */}}
+    {{/* <meta name="twitter:title" content="{{ page.title }} | {{ site.title }} | {{ site.company }}"> */}}
+    {{/* <meta name="twitter:description" content="{{ site.description }}"> */}}
+    {{/* <meta name="twitter:image" content="{{ page.photos }}"> */}}
+    {{/* <script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"{{ site.type }}","@id":"#{{ site.type }}","url":"https:\/\/{{ site.company }}\/","name":"{{ page.title }} - {{ site.title }} - {{ site.company }}","potentialAction":{"@type":"SearchAction","target":"https:\/\/{{ site.company }}\/?s={search_term_string}","query-input":"required name=search_term_string"},"image":"{{ page.photos }}","address":{ */}}
+    {{/* "streetAddress":"{{ site.streetAddress }}","name": "{{ site.address }}","postalCode": "{{ site.postalCode }}"},"telephone":"{{ site.telephone }}","priceRange":"100.000"}</script> */}}
+    {{/* <link rel="manifest" href="/manifest.json"> */}}
+    {{/* <meta name="apple-mobile-web-app-capable" content="yes"> */}}
+    {{/* <link rel="apple-touch-icon" sizes="120x120" href="{{ site.favicon }}"> */}}
+    {{/* <link rel="apple-touch-icon" sizes="152x152" href="{{ site.favicon }}"> */}}
+    {{/* <link rel="apple-touch-icon" sizes="167x167" href="{{ site.favicon }}"> */}}
+    {{/* <link rel="apple-touch-icon" sizes="180x180" href="{{ site.favicon }}"> */}}
+
+    {% include amp-project.html %}
+    {% include amp-boilerplate.html %}
+    {% include amp-instagram.html %}
+    {% include amp-sidebar.html %}
+    {% include amp-form.html %}
+    {% include amp-iframe.html %}
     <style amp-custom>
         {% include amp-custom-contact.html %}
     </style>

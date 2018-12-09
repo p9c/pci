@@ -63,7 +63,8 @@ type Contact struct {
 	SubTitle string `json:"subtitle"`
 }
 
-type Contact struct {
-	Title    string `json:"title"`
-	SubTitle string `json:"subtitle"`
+type Resources struct {
+	Type  string `json:"type"`
+	Title string `json:"title"`
+	URL   string `json:"url"`
 }

@@ -5,29 +5,31 @@ import (
 	"net/http"
 
 	"github.com/alecthomas/template"
+	"github.com/gorilla/mux"
 	"github.com/parallelcointeam/pci/mod"
 )
 
 func AmpHandler(w http.ResponseWriter, r *http.Request) {
-	// vars := mux.Vars(r)
-	// lang := vars["lang"]
-	// page := vars["page"]
+	vars := mux.Vars(r)
+	lang := vars["lang"]
+	page := vars["page"]
 	site := mod.Site{}
 	if err := JDB.Read("site", "meta", &site); err != nil {
 		fmt.Println("Error", err)
 	}
-	home := mod.Home{}
-	if err := JDB.Read("en", "home", &home); err != nil {
+	var pageData interface{}
+	if err := JDB.Read(lang, page, &pageData); err != nil {
 		fmt.Println("Error", err)
 	}
 	data := struct {
 		Site mod.Site `json:"site"`
-		Home mod.Home `json:"home"`
+		//	Page interface{} `json:"page"`
 	}{
 		site,
-		home,
+		//pageData,
 	}
 	//	tmpl, _ := template.New("").ParseFiles("./tpl/amp/index.gohtml", "./tpl/amp/lyt/home.gohtml", "./tpl/amp/inc/amp.gohtml", "./tpl/amp/inc/nav.gohtml", "./tpl/amp/inc/amp-css-home.gohtml", "./tpl/amp/inc/footer.gohtml")
-	tmpl, _ := template.New("").ParseFiles("./tpl/icons/logo.gohtml", "./tpl/icons/homeics.gohtml", "./tpl/amp/index.gohtml", "./tpl/amp/lyt/home.gohtml", "./tpl/amp/inc/nav.gohtml", "./tpl/amp/inc/amp.gohtml", "./tpl/amp/inc/amp-basecss.gohtml", "./tpl/amp/inc/amp-basecssplgs.gohtml", "./tpl/amp/inc/amp-css.gohtml", "./tpl/amp/inc/footer.gohtml")
+	//	tmpl, _ := template.New("").ParseFiles("./tpl/icons/logo.gohtml", "./tpl/icons/icons.gohtml", "./tpl/amp/"+page+".gohtml", "./tpl/amp/lyt/base.gohtml", "./tpl/amp/inc/nav.gohtml", "./tpl/amp/inc/amp.gohtml", "./tpl/amp/inc/amp-basecss.gohtml", "./tpl/amp/inc/amp-basecssplgs.gohtml", "./tpl/amp/inc/amp-css.gohtml", "./tpl/amp/inc/footer.gohtml")
+	tmpl, _ := template.New("").ParseFiles("./tpl/amp/lyt/base.gohtml")
 	tmpl.ExecuteTemplate(w, "home", data)
 }
