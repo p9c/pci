@@ -23,6 +23,7 @@ type Home struct {
 	SubTitle    string `json:"subtitle"`
 	Welcome     string `json:"welcome"`
 	About       string `json:"about"`
+	GetApp      string `json:"getapp"`
 	Features    string `json:"features"`
 	Feature1    string `json:"feature1"`
 	Feature1txt string `json:"feature1txt"`
@@ -42,4 +43,27 @@ type Home struct {
 	Moto2       string `json:"moto2"`
 	Contact     string `json:"contact"`
 	Footer      string `json:"footer"`
+}
+
+type About struct {
+	Title    string `json:"title"`
+	SubTitle string `json:"subtitle"`
+}
+type Download struct {
+	Title    string `json:"title"`
+	SubTitle string `json:"subtitle"`
+}
+type RoadMap struct {
+	Title    string `json:"title"`
+	SubTitle string `json:"subtitle"`
+}
+
+type Contact struct {
+	Title    string `json:"title"`
+	SubTitle string `json:"subtitle"`
+}
+
+type Contact struct {
+	Title    string `json:"title"`
+	SubTitle string `json:"subtitle"`
 }

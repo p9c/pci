@@ -1,0 +1,158 @@
+{{define "css"}}
+
+:root {
+--blue: #3075cf;
+--light-blue: #30a5cf;
+
+--green: #30cf30;
+--orange: #ff7500;
+--yellow: #ffd500;
+--red: #cf3030;
+--purple: #cf30cf;
+
+--black: #303030;
+--white: #fcfcfc;
+
+--dark-gray:#4d4d4d;
+--gray:#808080;
+--light-gray:#c0c0c0;
+
+	--base:#cfcfcf;
+  --light:#c3c3c3;
+  --lighter: #f3f3f3;
+  
+
+  --border-light: rgba(255, 255, 255, .62);
+  --border-dark: rgba(0,0,0, .38);
+
+  --trans-light: rgba(255, 255, 255, .24);
+  --trans-dark: rgba(0,0,0, .24);
+  --trans-gray: rgba(48,48,48, .38);
+
+  --text:'Ubuntu';
+  --name:'Abel';
+  --title:'Ubuntu';
+  --big-title:'Vollkorn SC';
+    
+  --pri: var(--blue);
+  --sec: var(--light-blue);
+}
+
+/* COLORS */
+.bgwhite{
+  background: var(--white);
+  fill:var(--white);
+}
+.bgblack{
+  background: var(--black);
+  fill:var(--black);
+}
+.bgblue{
+  background: var(--blue);
+  fill:var(--blue);
+}
+.bglight-blue{
+  background: var(--light-blue);
+  fill:var(--light-blue);
+}
+.bggreen{
+  background: var(--green);
+  fill:var(--green);
+}
+.bgorange{
+  background: var(--orange);
+  fill:var(--orange);
+}
+.bgyellow{
+  background: var(--yellow);
+  fill:var(--yellow);
+}
+.bgred{
+  background:var(--red);
+  fill:var(--red);
+}
+.bgpurple{
+  background: var(--purple);
+  fill:var(--purple);
+}
+.bggray{
+  background: var(--gray);
+  fill:var(--gray);
+}
+
+.txwhite{
+  color: var(--white);
+}
+.txblack{
+  color: var(--black);
+}
+.txblue{
+  color: var(--blue);
+}
+.txlight-blue{
+  color: var(--light-blue);
+}
+.txgreen{
+  color: var(--green);
+}
+.txorange{
+  color: var(--orange);
+}
+.txyellow{
+  color: var(--yellow);
+}
+.txred{
+  color:var(--red);
+}
+.txpurple{
+  color: var(--purple);
+}
+.txgray{
+  color: var(--gray);
+}
+
+
+/* Elements */
+
+
+
+
+body{
+  color: 	 #303030;
+  color: 	 var(--black);
+  background:  #cfcfcf;
+  background:  var(--white);
+}
+
+
+.slider{
+  height: 100vh;
+  background-image:url("/s/imgs/mainbg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-shadow:0 1px 0 var(--black);
+}
+.slider h1{
+  font-size:8vh;
+}
+.slider h2{
+  font-size:5vh;
+}
+
+
+svg{
+  width:62%;
+  height:62%;
+  margin:0 auto;
+}
+
+
+.hvw{
+  height:50vw;
+}
+.hvw svg{
+  width:62%;
+  height:62%;
+}
+{{end}}

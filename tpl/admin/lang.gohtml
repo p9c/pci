@@ -3,12 +3,13 @@
 <section class="section">
 <div class="card">
   <div class="card-content">
-
-{{range .Languages}}
-<a href="/admin/{{.}}">
+{{ $lang := .Lng}}
+{{range .Site.Pages}}
+<a href="/admin/{{$lang}}/{{.}}">
 <button class="button is-large">{{.}}</button>
 </a>
 {{end}}
+     
 </div>
 </div>
 </section>

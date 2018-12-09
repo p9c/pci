@@ -28,6 +28,6 @@ func AmpHandler(w http.ResponseWriter, r *http.Request) {
 		home,
 	}
 	//	tmpl, _ := template.New("").ParseFiles("./tpl/amp/index.gohtml", "./tpl/amp/lyt/home.gohtml", "./tpl/amp/inc/amp.gohtml", "./tpl/amp/inc/nav.gohtml", "./tpl/amp/inc/amp-css-home.gohtml", "./tpl/amp/inc/footer.gohtml")
-	tmpl, _ := template.New("").ParseFiles("./tpl/amp/index.gohtml", "./tpl/amp/lyt/home.gohtml", "./tpl/amp/inc/nav.gohtml", "./tpl/amp/inc/amp.gohtml", "./tpl/amp/inc/amp-css-home.gohtml", "./tpl/amp/inc/footer.gohtml")
+	tmpl, _ := template.New("").ParseFiles("./tpl/icons/logo.gohtml", "./tpl/icons/homeics.gohtml", "./tpl/amp/index.gohtml", "./tpl/amp/lyt/home.gohtml", "./tpl/amp/inc/nav.gohtml", "./tpl/amp/inc/amp.gohtml", "./tpl/amp/inc/amp-basecss.gohtml", "./tpl/amp/inc/amp-basecssplgs.gohtml", "./tpl/amp/inc/amp-css.gohtml", "./tpl/amp/inc/footer.gohtml")
 	tmpl.ExecuteTemplate(w, "home", data)
 }
