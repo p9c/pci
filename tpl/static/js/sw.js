@@ -136,7 +136,7 @@ self.__precacheManifest = [
     "revision": "740273fe38e4906abe2330aa644bc29a"
   },
   {
-    "url": "robots.txt",
+    "url": "/s/robots.txt",
     "revision": "1a2941002cfcb13466576b3dcdbfb96f"
   },
   {
