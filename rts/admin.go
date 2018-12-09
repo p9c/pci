@@ -111,8 +111,6 @@ func AdminHandler(w http.ResponseWriter, r *http.Request) {
 		spec4 := r.FormValue("spec4")
 		moto1 := r.FormValue("moto1")
 		moto2 := r.FormValue("moto2")
-		contact := r.FormValue("contact")
-		footer := r.FormValue("footer")
 
 		var HOME mod.Home = mod.Home{
 			Title:       title,
@@ -136,8 +134,6 @@ func AdminHandler(w http.ResponseWriter, r *http.Request) {
 			Spec4:       spec4,
 			Moto1:       moto1,
 			Moto2:       moto2,
-			Contact:     contact,
-			Footer:      footer,
 		}
 		JDB.Write(lang, "home", HOME)
 		http.Redirect(w, r, "/admin/"+lang+"/home", 302)

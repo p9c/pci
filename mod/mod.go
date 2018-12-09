@@ -16,6 +16,8 @@ type Site struct {
 
 	Fb_app_id string `json:"fb_app_id"`
 	Twitter   string `json:"twitter"`
+	Contact   string `json:"contact"`
+	Footer    string `json:"footer"`
 }
 
 type Home struct {
@@ -41,8 +43,6 @@ type Home struct {
 	Spec4       string `json:"spec4"`
 	Moto1       string `json:"moto1"`
 	Moto2       string `json:"moto2"`
-	Contact     string `json:"contact"`
-	Footer      string `json:"footer"`
 }
 
 type About struct {

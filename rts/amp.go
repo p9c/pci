@@ -22,14 +22,16 @@ func AmpHandler(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("Error", err)
 	}
 	data := struct {
-		Site mod.Site `json:"site"`
-		//	Page interface{} `json:"page"`
+		Site mod.Site    `json:"site"`
+		Lang string      `json:"lang"`
+		Page interface{} `json:"page"`
 	}{
 		site,
-		//pageData,
+		lang,
+		pageData,
 	}
 	//	tmpl, _ := template.New("").ParseFiles("./tpl/amp/index.gohtml", "./tpl/amp/lyt/home.gohtml", "./tpl/amp/inc/amp.gohtml", "./tpl/amp/inc/nav.gohtml", "./tpl/amp/inc/amp-css-home.gohtml", "./tpl/amp/inc/footer.gohtml")
-	//	tmpl, _ := template.New("").ParseFiles("./tpl/icons/logo.gohtml", "./tpl/icons/icons.gohtml", "./tpl/amp/"+page+".gohtml", "./tpl/amp/lyt/base.gohtml", "./tpl/amp/inc/nav.gohtml", "./tpl/amp/inc/amp.gohtml", "./tpl/amp/inc/amp-basecss.gohtml", "./tpl/amp/inc/amp-basecssplgs.gohtml", "./tpl/amp/inc/amp-css.gohtml", "./tpl/amp/inc/footer.gohtml")
-	tmpl, _ := template.New("").ParseFiles("./tpl/amp/lyt/base.gohtml")
-	tmpl.ExecuteTemplate(w, "home", data)
+	tmpl, _ := template.New("").ParseFiles("./tpl/icons/logo.gohtml", "./tpl/icons/icons.gohtml", "./tpl/amp/"+page+".gohtml", "./tpl/amp/lyt/base.gohtml", "./tpl/amp/inc/nav.gohtml", "./tpl/amp/inc/amp.gohtml", "./tpl/amp/inc/amp-basecss.gohtml", "./tpl/amp/inc/amp-basecssplgs.gohtml", "./tpl/amp/inc/amp-css.gohtml", "./tpl/amp/inc/footer.gohtml")
+	//tmpl, _ := template.New("").ParseFiles("./tpl/amp/lyt/base.gohtml")
+	tmpl.ExecuteTemplate(w, page, data)
 }

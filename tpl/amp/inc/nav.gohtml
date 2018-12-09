@@ -1,13 +1,13 @@
 {{define "nav"}}
 <header class="fixed left-0 top-0 right-0 flex justify-between items-center px3 lg-px4 bgblack" data-sticky-container>
-    <button on="tap:AMP.navigateTo(url='/amp')" class="btn not-rounded bgblack logo ">
+    <button on="tap:AMP.navigateTo(url='/amp/{{.Lang}}/home')" class="btn not-rounded bgblack logo ">
         {{ template "logo"}}
     </button>
     <nav class="list-reset txwhite ">
-        <button on="tap:AMP.navigateTo(url='/amp/product')" class="inline-block mr1 btn ">About</button>
-        <button on="tap:AMP.navigateTo(url='/amp/gallery')" class="inline-block mr1 btn ">Download</button>
-        <button on="tap:AMP.navigateTo(url='/amp/blog')" class="inline-block mr1 btn ">Blog</button>
-        <button on="tap:AMP.navigateTo(url='/amp/contact')" class="inline-block mr1 btn ">Contact</button>
+        <button on="tap:AMP.navigateTo(url='/amp/{{.Lang}}/product')" class="inline-block mr1 btn ">About</button>
+        <button on="tap:AMP.navigateTo(url='/amp/{{.Lang}}/gallery')" class="inline-block mr1 btn ">Download</button>
+        <button on="tap:AMP.navigateTo(url='/amp/{{.Lang}}/blog')" class="inline-block mr1 btn ">Blog</button>
+        <button on="tap:AMP.navigateTo(url='/amp/{{.Lang}}/contact')" class="inline-block mr1 btn ">Contact</button>
     </nav>
 </header>
 {{end}}

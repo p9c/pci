@@ -12,6 +12,7 @@
 	"languages": ["en","sr","de","hu","bg","es","ru","cn","jp"],
 	"pages": ["site","home","roadmap", "about","download"],
 	"fb_app_id": "fb",
-	"twitter": "Twitter"
-
+	"twitter": "Twitter",
+	"contact": "Contact icons etc",
+	"footer": "Footer copyright"
 }

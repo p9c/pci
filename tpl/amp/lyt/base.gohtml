@@ -1,14 +1,13 @@
 {{define "home"}}
 <!DOCTYPE html>
 <html ⚡ lang="{{.Site.Lang }}">
-
 <head prefix="og: http://ogp.me/ns#">
-    <title>{{ .Page.title }} {{ .Site.Title }} {{ .Site.Company }}</title>
+    <title>{{ template "title"}} {{ .Site.Title }} {{ .Site.Company }}</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <link rel="shortcut icon" href="{{ .Site.Favicon }}">
-    <link rel="canonical" href="{{ .Site.Url }}{{ Page.url | replace:'index.html',''}}">
+    <link rel="canonical" href="{{ template "canonical"}}">
     <meta name="theme-color" content="#303030"/>
     <meta name="amp-experiments-opt-in" content="visibility-v2,visibility-v3">
     <meta name="keywords" lang="{{ .Site.Lang }}" content="{{ range .Site.Keywords }}{{.}},{{end}}">
@@ -19,15 +18,15 @@
     <meta property="og:url" content="{{ .Site.Siteurl }}" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="{{ .Site.Title }}" />
-    <meta property="og:title" content="{{ .Page.title }} | {{ .Site.Title }} | {{ .Site.Company }}" />
-    <meta property="og:description" content="{{ .Site.Description }}" />
+    <meta property="og:title" content="{{ template "title"}} | {{ .Site.Title }} | {{ .Site.Company }}" />
+    <meta property="og:description" content="{{ .Site.Description }}" /> 
     {{/* <meta property="og:image" content="{{ page.photos }}" /> */}}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@{{.Site.Twitter }}">
     <meta name="twitter:creator" content="@{{ .Site.Creator }}">
-    <meta name="twitter:title" content="{{ .Page.title }} | {{ .Site.Title }} | {{ .Site.Company }}">
+    <meta name="twitter:title" content="{{ template "title"}} | {{ .Site.Title }} | {{ .Site.Company }}">
     <meta name="twitter:description" content="{{ .Site.Description }}">
-    {{/* <meta name="twitter:image" content="{{ page.photos }}"> */}}
+    {{/* <meta name="twitter:image" content="{{ page.photos }}">  */}}
     {{/*<script type='application/ld+json'>
     {"@context":"http:\/\/schema.org","@type":"{{ .Site.type }}","@id":"#{{ .Site.type }}","url":"https:\/\/{{ .Site.Company }}\/","name":"{{ page.title }} - {{ .Site.title }} - {{ .Site.Company }}","potentialAction":{"@type":"SearchAction","target":"https:\/\/{{ .Site.Company }}\/?s={search_term_string}","query-input":"required name=search_term_string"},"image":"{{ page.photos }}","address":{
     "streetAddress":"{{ .Site.StreetAddress }}","name": "{{ .Site.Address }}","postalCode": "{{ .Site.postalCode }}"},"telephone":"{{ .Site.telephone }}","priceRange":"100.000"}</script>*/}}
@@ -38,22 +37,22 @@
     <link rel="apple-touch-icon" sizes="167x167" href="{{ .Site.Favicon }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.Favicon }}">
 
-    {{/* {{ template "amp-project" .}} */}}
+    {{ template "amp-project" .}}
     {{/* {{ template "amp-instagram" .}} */}}
     {{/* {{ template "amp-sidebar" .}} */}}
     {{/* {{ template "amp-form" .}} */}}
-    {{/* {{ template "amp-boilerplate" .}} */}}
+    {{ template "amp-boilerplate" .}}
     <style amp-custom>
-        {{/* {{ template "basecss" .}} */}}
-        {{/* {{ template "basecssplgs" .}} */}}
-        {{/* {{ template "css" .}} */}}
+        {{ template "basecss" .}}
+        {{ template "basecssplgs" .}}
+        {{ template "css" .}}
     </style>
 </head>
 
 <body>
-    {{/* {{ template "nav" .}} */}}
-    {{/* {{ template "content" .}} */}}
-    {{/* {{ template "footer" .}}  */}}
+    {{ template "nav" .}}
+    {{ template "content" .}}
+    {{ template "footer" .}} 
     {{/* {% include ./tpl/amp/inc/float-button.html %} */}}
 </body>
 
